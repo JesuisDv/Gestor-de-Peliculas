@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Pelicular</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main>
+        <!-- Section 1 Form -->
+        <section>
+            <form id="form" action="">
+                <label for="title">Titulo</label>
+                <input type="text" name="title" id="title" placeholder="Titulo de la pelicula" required>
+                <label for="director">Director</label>
+                <input type="text" name="director" id="director" placeholder="Nombre del director" required>
+                <label for="year">Año</label>
+                <input type="number" name="year" id="year" placeholder="Año de la pelicula" required>
+                <label for="image">Imagen</label>
+                <input type="text" name="img" id="image" placeholder="URL de la imagen" required>
+                <button type="submit">Subir</button>
+            </form>
+        </section>
+        <!-- Section 2 Movies -->
+        <section>
+            <h1>Mis Peliculas</h1>
+            <div id="cont-peliculas" class="">
+                <!-- Aqui se mostraran las peliculas -->
+            </div>
+        </section>
+    </main>
+
+</body>
+<script src="./scripts.js"></script>
+</html>

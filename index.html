@@ -5,27 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestor de Pelicular</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <main>
-        <!-- Section 1 Form -->
+<body class="flex sm:flex-row bg-gray-800 text-white">
+ <!-- 1 Form -->
+    <aside class="fixed top-0 left-0 flex-col  sm:w-76 bg-gray-900 text-white p-4 gap-6 h-full h-screen" >
+        <h2 class="text-white text-2xl font-bold mb-5">Agrega una Pelicula 📽️</h2>
+        <form id="form" action="" class="flex flex-col gap-4 ">
+            <label for="title" class="font-medium text-lg">Titulo</label>
+            <input type="text" name="title" id="title" placeholder="Titulo de la pelicula" required class="text-gray-900 rounded-sm">
+            <label for="director" class="font-medium text-lg">Director</label>
+            <input type="text" name="director" id="director" placeholder="Nombre del director" required class="text-gray-900 rounded-sm">
+            <label for="year" class="font-medium text-lg">Año</label>
+            <input type="number" name="year" id="year" placeholder="Año de la pelicula" required class="text-gray-900 rounded-sm">
+            <label for="image" class="font-medium text-lg">Imagen</label>
+            <input type="text" name="img" id="image" placeholder="URL de la imagen" required class="text-gray-900 rounded-sm">
+            <button type="submit" class="bg-gray-400 rounded-md m-5 hover:bg-gray-600">Subir</button>
+        </form>
+    </aside>
+
+    <main class="flex-1 ml-64 p-6">
+     <!-- Section 2 Movies -->
         <section>
-            <form id="form" action="">
-                <label for="title">Titulo</label>
-                <input type="text" name="title" id="title" placeholder="Titulo de la pelicula" required>
-                <label for="director">Director</label>
-                <input type="text" name="director" id="director" placeholder="Nombre del director" required>
-                <label for="year">Año</label>
-                <input type="number" name="year" id="year" placeholder="Año de la pelicula" required>
-                <label for="image">Imagen</label>
-                <input type="text" name="img" id="image" placeholder="URL de la imagen" required>
-                <button type="submit">Subir</button>
-            </form>
-        </section>
-        <!-- Section 2 Movies -->
-        <section>
-            <h1>Mis Peliculas</h1>
-            <div id="cont-peliculas" class="">
+            <h1 class="flex-1 ml-12 font-bold text-3xl">Mis Peliculas🎬</h1>
+            <div id="cont-peliculas" class="m-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <!-- Aqui se mostraran las peliculas -->
             </div>
         </section>
